@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eatopia</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./web/css/style1.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-bar">
+        <div class="top-left">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <div class="top-right">
+            <span><i class="fa-solid fa-location-dot"></i> ĐH VINH</span>
+            <span><i class="fa-regular fa-envelope"></i> thanhluan070406@GMAIL.COM</span>
+            <span><i class="fa-solid fa-phone"></i> 0961652546</span>
+            <span><i class="fa-regular fa-clock"></i> 07:00–22:00</span>
+        </div>
+    </div>
+
+    <div class="menu-bar">
+        <div class="logo">
+            <img src="./web/img/logo.svg" alt="ignore">
+    </div>
+
+        <nav>
+            <div href="google.com">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">THỰC ĐƠN ▾</a>
+            <a href="#">BLOG</a>
+            <a href="#">GIỚI THIỆU</a>
+            <a href="#">LIÊN HỆ</a>
+            </div>
+        </nav>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+
+</header>  
+
+<div class="slider">
+
+    <div class="slide active">
+        <img src="./web/img/S1.jpg" alt="Slide 1">
+        <div class="slide-text">
+            <h3>TINH HOA ẨM THỰC</h3>
+            <h1>VIỆT NAM</h1>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="./web/img/S2.jpg" alt="Slide 2">
+        <div class="slide-text">
+            <h3>Đắm Đuối Mê Say</h3>
+            <h1>Cơm Tấm Sài Gòn</h1>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="./web/img/S3.png" alt="Slide 3">
+        <div class="slide-text">
+            <h3>Vị Ngon Từ Cố Đô</h3>
+            <h1>Bún Bò Huế</h1>
+        </div>
+    </div>
+
+    <div class="arrow left" onclick="prevSlide()">❮</div>
+    <div class="arrow right" onclick="nextSlide()">❯</div>
+
+
+    <div class="dots">
+        <span onclick="goToSlide(0)" class="dot active"></span>
+        <span onclick="goToSlide(1)" class="dot"></span>
+        <span onclick="goToSlide(2)" class="dot"></span>
+    </div>
+
+</div>
+<div class="product-container">
+
+<div class="grid-container">
+
+
+  <div class="product-card big-card">
+    <div class="photos">
+      <img src="./web/img/Bánh xèo miền nam.jpg" alt="the1">
+    </div>
+    <div class="discount">-9%</div>
+    <div class="heart" onclick="toggleHeart(this)">♡</div>
+    <div class="product-info">
+      <h3>Bánh xèo miền Nam</h3>
+      <p class="price">55.000đ <span>50.000đ</span></p>
+    </div>
+  </div>
+
+  <div class="product-card medium-card">
+    <div class="photos">
+      <img src="./web/img/Bún bò Huế chuẩn.jpg" alt="the2">
+    </div>
+    <div class="discount">-9%</div>
+    <div class="heart" onclick="toggleHeart(this)">♡</div>
+    <div class="product-info">
+      <h3>Bún bò Huế</h3>
+      <p class="price">55.000đ <span>50.000đ</span></p>
+    </div>
+  </div>
+
+  <div class="split-column">
+    <div class="product-card small-card">
+      <div class="photos">
+        <img src="./web/img/bún chả hà nội.jpg" alt="the3">
+      </div>
+      <div class="discount">-9%</div>
+      <div class="heart" onclick="toggleHeart(this)">♡</div>
+      <div class="product-info">
+        <h3>Bún chả nướng Hà Nội</h3>
+        <p class="price">55.000đ <span>50.000đ</span></p>
+      </div>
+    </div>
+
+    <div class="product-card small-card">
+      <div class="photos">
+        <img src="./web/img/cơm rang hải sản.jpg" alt="the4">
+      </div>
+      <div class="discount">-9%</div>
+      <div class="heart" onclick="toggleHeart(this)">♡</div>
+      <div class="product-info">
+        <h3>Cơm rang hải sản</h3>
+        <p class="price">55.000đ <span>50.000đ</span></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Phở gà Hà Nội.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Phở gà Hà Nội</h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Bò hầm sốt vang.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Bò sốt vang</h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Súp lươn Nghệ An.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Súp lươn Nghệ </h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Cơm tấm sài gòn.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Cơm tấm Sài Gòn </h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Cuốn tôm.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Cuốn tôm </h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Vịt quay lạng sơn.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Vịt quay Lạng Sơn</h3>
+            <p class="price">55.000đ <span>50.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/Bánh mướt nhân thịt.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Bánh mướt nhân thịt</h3>
+            <p class="price">260.000đ <span>300.000đ</span></p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="photos">
+            <img src="./web/img/bánh canh cua.jpg">
+        </div>
+        <div class="discount">-9%</div>
+        <div class="heart" onclick="toggleHeart(this)">♡</div>
+        <div class="product-info">
+            <h3>Bánh canh cua</h3>
+            <p class="price">60.000đ <span>70.000đ</span></p>
+        </div>
+    </div>
+</div>
+
+
+   <!-- ========================== TESTIMONIAL SLIDER ========================== -->
+<div class="review-section">
+    <div class="review-slider">
+
+
+        <div class="review active">
+            <div class="stars">
+                ★★★★☆
+            </div>
+            <p class="content">
+                “Bún chả Hà Nội với thịt nướng thơm lừng, bún mát lạnh và nước chấm đậm đà là một sự kết hợp hoàn hảo không thể cưỡng lại.”
+            </p>
+            <p class="author">facebook: Xuân Hiếu</p>
+        </div>
+
+
+        <div class="review">
+            <div class="stars">
+                ★★★★★
+            </div>
+            <p class="content">
+                “Một bát phở bò nóng hổi, nước dùng ngọt thanh kết hợp cùng bánh phở mềm và thịt bò tươi ngon thực sự là một trải nghiệm khó quên!”
+            </p>
+            <p class="author">facebook: Văn Hà</p>
+        </div>
+
+ 
+        <div class="review">
+            <div class="stars">
+                ★★★★★
+            </div>
+            <p class="content">
+                “Bánh mì giòn rụm bên ngoài, nhân bên trong đầy đặn với pate, thịt nguội, dưa leo và rau thơm thật sự tuyệt vời!”
+            </p>
+            <p class="author">facebook: Minh Thiên</p>
+        </div>
+
+ 
+        <div class="review-arrow left" onclick="prevReview()">❮</div>
+        <div class="review-arrow right" onclick="nextReview()">❯</div>
+
+  
+        <div class="review-dots">
+            <span class="r-dot active" onclick="goToReview(0)"></span>
+            <span class="r-dot" onclick="goToReview(1)"></span>
+            <span class="r-dot" onclick="goToReview(2)"></span>
+        </div>
+    </div>
+</div>
+
+<!-- ========================== CHÂN TRANG ========================== -->
+    
+<div class="footer-section">
+        <div class="footer-col">
+            <h2>EATOPIA TOGETHER</h2>
+            <div class="underline"></div>
+    
+            <p>
+                Nơi mà hương vị truyền thống hòa quyện cùng sự tinh tế trong ẩm thực hiện đại.
+                Tại đây, chúng tôi tự hào mang đến cho quý khách những trải nghiệm ẩm thực độc đáo
+                và đáng nhớ nhất.
+            </p>
+    
+            <div class="footer-icons">
+                <i class="fa-regular fa-envelope"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            
+        </div>
+        <div class="footer-col">
+            <h2>ĐỊA CHỈ</h2>
+            <div class="underline"></div>
+    
+            <p>Địa chỉ: 182 Lê Duẩn, TP. Vinh, Nghệ An</p>
+            <p>Hotline: 0961 652 546</p>
+            <p>Email: thanhluan070406@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h2>NHÀ HÀNG</h2>
+            <div class="underline"></div>
+            <img src="./web/img/Ginger. (3).png" class="footer-img">
+        </div>
+    </div>
+
+<script src="web/java/script.js"></script>
+
+</body>
+
+</html>
